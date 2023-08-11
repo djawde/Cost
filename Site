@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>حاسبة تكلفة الدفع عند الاستلام</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .calculator {
+            background-color: #ffffff;
+            border-radius: 25px;
+            padding: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: 400px;
+        }
+        .calculator label {
+            font-size: 16px;
+            display: block;
+            margin-bottom: 5px;
+        }
+        .calculator input {
+            width: 95%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+        .calculator button {
+            background-color: red;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 16px;
+            width: 95%;
+        }
+        .calculator h2 {
+            margin-top: 20px;
+            font-size: 20px;
+        }
+
+    .calculator {
+        /* Existing styles */
+
+        /* Add box-shadow for a card-like effect */
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .calculator:hover {
+        transform: scale(1.02);
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+    }
+
+    .calculator label {
+        /* Existing styles */
+
+        /* Add subtle animation for label */
+        display: inline-block;
+        width: 100%;
+        font-weight: bold;
+        margin-bottom: 8px;
+        opacity: 0.7;
+        transition: opacity 0.3s ease;
+    }
+
+    .calculator label:hover {
+        opacity: 1;
+    }
+
+    .calculator input {
+        /* Existing styles */
+
+        border: 1px solid #d1d1d1;
+        padding: 12px;
+        transition: border-color 0.3s ease, background-color 0.3s ease;
+        background-color: #f5f5f5;
+    }
+
+    .calculator input:focus {
+        border-color: #007bff;
+        background-color: #ffffff;
+    }
+
+    .calculator button {
+        /* Existing styles */
+
+        /* Add gradient background */
+        background: linear-gradient(to right, #007bff, #0056b3);
+        color: #fff;
+        font-weight: bold;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+
+    .calculator button:hover {
+        background: linear-gradient(to right, #0056b3, #003f81);
+        transform: scale(1.05);
+    }
+
+    .calculator h2 {
+        /* Existing styles */
+
+        margin-top: 20px;
+        font-size: 24px;
+        color: #333;
+    }
+
+    /* Rest of your existing CSS styles */
+
+    .calculator {
+        /* Existing styles */
+
+        /* Add a background gradient for a luxurious feel */
+        background: linear-gradient(to bottom, #f5f5f5, #e6e6e6);
+        border-radius: 12px;
+        padding: 30px;
+        text-align: center;
+        transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+		border: 4px solid #ffd700;
+        background: linear-gradient(to bottom, #fffef0, #ffffff);
+    }
+
+    .calculator:hover {
+        transform: scale(1.05);
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        background: linear-gradient(to bottom, #ffffff, #f5f5f5);
+    }
+
+    .calculator label {
+        /* Existing styles */
+
+        /* Add a subtle shine effect on hover */
+        display: inline-block;
+        width: 100%;
+        font-weight: bold;
+        margin-bottom: 10px;
+        opacity: 0.8;
+        transition: opacity 0.3s ease;
+    }
+
+    .calculator label:hover {
+        opacity: 3;
+		ackground: linear-gradient(to right, #ffaf00, #ff8c00);
+
+    }
+
+    .calculator input {
+        /* Existing styles */
+
+        border: none;
+        border-bottom: 1px solid #ccc;
+        padding: 10px;
+        font-size: 16px;
+        transition: border-color 0.3s ease, background-color 0.3s ease;
+        background-color: transparent;
+    }
+
+    .calculator input:focus {
+        border-color: #007bff;
+        background-color: rgba(0, 123, 255, 0.1);
+    }
+
+    .calculator button {
+        /* Existing styles */
+
+        /* Add a subtle 3D button effect */
+        background: linear-gradient(to bottom, #007bff, #0056b3);
+        color: #fff;
+        font-weight: bold;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: background-color 0.3s ease, transform 0.3s ease;
+        transform-style: preserve-3d;
+    }
+
+    .calculator button:hover {
+        background: linear-gradient(to bottom, #0056b3, #003f81);
+        transform: scale(1.05) translateZ(10px);
+    }
+
+    .calculator h2 {
+        /* Existing styles */
+
+
+		    font-size: 36px;
+        font-family: 'Cairo', sans-serif; /* Replace 'Cairo' with your preferred Arabic font */
+        color: #ffd700;
+        text-align: center;
+        background: linear-gradient(to right, #ffd700, #ffaf00);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        margin-top: 30px;
+		        font-weight: bold; /* Add bold font weight */
+
+    }
+		
+    }
+
+    /* Rest of your existing CSS styles */
+
+    .calculator {
+        /* Existing styles */
+
+        /* Add a gradient background for a luxurious touch */
+        background: linear-gradient(to bottom, #f9f9f9, #ffffff);
+        border-radius: 16px;
+        padding: 30px;
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        max-width: 400px;
+        margin: 0 auto;
+    }
+
+    .calculator:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 30px 60px rgba(0, 0, 0, 0.15);
+    }
+
+    .calculator label {
+        /* Existing styles */
+
+        /* Add a subtle gold gradient for labels */
+        display: inline-block;
+        width: 100%;
+        font-weight: bold;
+        margin-bottom: 8px;
+        opacity: 0.8;
+        background: linear-gradient(to right, #ffd700, #ffaf00);
+        padding: 8px;
+        border-radius: 20px;
+        transition: opacity 0.3s ease;
+        text-align: center;
+    }
+
+    .calculator label:hover {
+        opacity: 2;
+    }
+
+    .calculator input {
+        /* Existing styles */
+
+        border: none;
+        padding: 12px;
+        transition: background-color 0.3s ease, color 0.3s ease;
+        background-color: #f0f0f0;
+        color: #333;
+        font-size: 16px;
+    }
+
+    .calculator input:focus {
+        background-color: #ffffff;
+        color: #007bff;
+    }
+
+    .calculator button {
+        /* Existing styles */
+
+        /* Add a golden gradient background for the button */
+        background: linear-gradient(to right, #ffd700, #ffaf00);
+        color: #000;
+        font-weight: bold;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: background-color 0.3s ease, transform 0.3s ease;
+        padding: 12px;
+        font-size: 18px;
+        text-transform: uppercase;
+    }
+
+    .calculator button:hover {
+        background: linear-gradient(to right, #ffaf00, #ff8c00);
+        transform: scale(1.05);
+    }
+
+    .calculator h2 {
+        /* Existing styles */
+
+        margin-top: 20px;
+        font-size: 28px;
+        color: #333;
+        text-align: center;
+    }
+
+
+
+    </style>
+</head>
+<body>
+    <div class="calculator">
+        <h2>حاسبة تكلفة الدفع عند الاستلام</h2>
+        <form id="costCalculatorForm">
+            <label for="productPrice">سعر المنتج (DZD):</label>
+            <input type="number" id="productPrice" name="productPrice" required>
+            
+            <label for="codFee">رسوم الدفع عند الاستلام (DZD):</label>
+            <input type="number" id="codFee" name="codFee" required>
+            
+            <label for="handlingFee">رسوم التعامل والتغليف (DZD):</label>
+            <input type="number" id="handlingFee" name="handlingFee" required>
+            
+            <label for="customsFee">رسوم الشحن الجمركي (DZD):</label>
+            <input type="number" id="customsFee" name="customsFee" required>
+            
+            <label for="packagingFee">رسوم التغليف والتغليف الخاص (DZD):</label>
+            <input type="number" id="packagingFee" name="packagingFee" required>
+            
+            <label for="returnShippingFee">رسوم شحن الإرجاع (DZD):</label>
+            <input type="number" id="returnShippingFee" name="returnShippingFee" required>
+            
+            <label for="shippingCost">تكلفة الشحن (DZD):</label>
+            <input type="number" id="shippingCost" name="shippingCost" required>
+            
+            <label for="remoteAreaSurcharge">رسوم المناطق النائية (DZD):</label>
+            <input type="number" id="remoteAreaSurcharge" name="remoteAreaSurcharge" required>
+            
+            <button type="button" onclick="calculateTotalCost()">حساب التكلفة الإجمالية</button>
+        </form>
+        
+        <h2>التكلفة الإجمالية: <span id="totalCost">0</span> DZD</h2>
+    </div>
+
+    <script>
+        function calculateTotalCost() {
+            const productPrice = parseFloat(document.getElementById('productPrice').value);
+            const codFee = parseFloat(document.getElementById('codFee').value);
+            const handlingFee = parseFloat(document.getElementById('handlingFee').value);
+            const customsFee = parseFloat(document.getElementById('customsFee').value);
+            const packagingFee = parseFloat(document.getElementById('packagingFee').value);
+            const returnShippingFee = parseFloat(document.getElementById('returnShippingFee').value);
+            const shippingCost = parseFloat(document.getElementById('shippingCost').value);
+            const remoteAreaSurcharge = parseFloat(document.getElementById('remoteAreaSurcharge').value);
+
+            let totalCost = productPrice + codFee + handlingFee + customsFee + packagingFee + returnShippingFee + shippingCost + remoteAreaSurcharge;
+
+            document.getElementById('totalCost').textContent = totalCost.toFixed(2);
+        }
+    </script>
+</body>
+</html>
